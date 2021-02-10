@@ -1,9 +1,5 @@
 package com.ecommerce.entities;
 
-
-
-
-
 import java.io.Serializable;
 
 import javax.persistence.Entity;
@@ -59,10 +55,17 @@ public LignePanier() {
 	super();
 	// TODO Auto-generated constructor stub
 }
-public LignePanier(int quantite, double prix) {
+/*public LignePanier(int quantite, double prix) {
 	super();
 	this.quantite = quantite;
 	this.prix = prix;
+}*/
+public LignePanier(Produit produit, int quantite, double prix, Commande commande) {
+	super();
+	this.produit = produit;
+	this.quantite = quantite;
+	this.prix = prix;
+	this.commande = commande;
 }
   
   

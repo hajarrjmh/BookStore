@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../static/css/bootstrap.min.css" 
+				th:href="@{css/bootstrap.min.css}"></link>
+	<title>Produits</title>
+	</head>
+	<body>
+	<div class="container">
+		<div class="panel panel-primary">
+				<div class="panel-heading">chercher une commande</div>
+				<div class="panel-body">
+					<form th:action="@{/index}" method="get">
+						<label>Numero De Commande</label>
+						<input th:value="${numCommande}" type="text" name="numCommande">
+						<input value="chercher" class="btn btn-primary" type="submit">
+					</form>
+				</div>
+			</div>
+			
+			<div class="panel panel-primary">
+				<div class="panel-heading">Commande</div>
+				<div class="panel-body">
+					<label>Date De Commande :</label>
+					<span th:text="${commande.dateCommande}"></span>
+				</div>
+			</div>
+		
+		
+			
+			<div class="panel panel-primary">
+				<div class="panel-heading">Client</div>
+				<div class="panel-body">
+					<table class="table">
+						<tr>
+							<th>ID</th><th>NOM</th><th>SOCIETE</th>
+						</tr>
+						<tr>
+							<td th:text="${client.idClient}"></td>
+							<td th:text="${client.nom}"></td>
+							<td th:text="${client.societe}"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+		<div class="panel panel-primary">
+				<div class="panel-heading">Produits</div>
+				<div class="panel-body">
+					<table class="table">
+						<tr>
+							<th>ID</th><th>DES</th><th>Prix</th><th>QTE</th>
+						</tr>
+						<tr th:each="p:${listComposante}">
+							<td th:text="${p.produit.idProduit}"></td>
+							<td th:text="${p.produit.designation}"></td>
+							<td th:text="${p.produit.prix*p.quantite}"></td>
+							<td th:text="${p.quantite}"></td>
+						</tr>
+						<tr>
+							<th colspan=3 align="center">TOTAL</th>
+							<td  align="center" th:text="${total}"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			</div>
+			
+	</body>
+</html>

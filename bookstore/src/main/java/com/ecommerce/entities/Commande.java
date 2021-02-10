@@ -47,8 +47,14 @@ public void setClient(Client client) {
 }
 public Commande() {
 	super();
-	// TODO Auto-generated constructor stub
+
 }
+public Commande(Date dateCommande, Client client) {
+	super();
+	this.dateCommande = dateCommande;
+	this.client = client;
+}
+
   
   
 }

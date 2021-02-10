@@ -4,7 +4,7 @@ package com.ecommerce.entities;
 
 import java.io.Serializable;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,7 +19,7 @@ public class Paiement implements Serializable {
 	
 	private Long idPaiement ;
 	private String nomTitulaire;
-	private int numCarte;
+	private String numCarte;
 	private int codeCVV ;
 	private Date dateExpiration;
 	public Long getIdPaiement() {
@@ -34,10 +34,10 @@ public class Paiement implements Serializable {
 	public void setNomTitulaire(String nomTitulaire) {
 		this.nomTitulaire = nomTitulaire;
 	}
-	public int getNumCarte() {
+	public String getNumCarte() {
 		return numCarte;
 	}
-	public void setNumCarte(int numCarte) {
+	public void setNumCarte(String numCarte) {
 		this.numCarte = numCarte;
 	}
 	public int getCodeCVV() {
@@ -56,7 +56,7 @@ public class Paiement implements Serializable {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Paiement(String nomTitulaire, int numCarte, int codeCVV, Date dateExpiration) {
+	public Paiement(String nomTitulaire, String numCarte, int codeCVV, Date dateExpiration) {
 		super();
 		this.nomTitulaire = nomTitulaire;
 		this.numCarte = numCarte;

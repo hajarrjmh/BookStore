@@ -77,7 +77,7 @@ public Produit() {
 	super();
 	// TODO Auto-generated constructor stub
 }
-public Produit(String designation,  double prix, String photo, int quantite) {
+/*public Produit(String designation,  double prix, String photo, int quantite) {
 	super();
 	this.designation = designation;
 	
@@ -85,7 +85,16 @@ public Produit(String designation,  double prix, String photo, int quantite) {
 	
 	this.photo = photo;
 	this.quantite = quantite;
+}*/
+public Produit(String designation, double prix, String photo, int quantite, Categorie categorie) {
+	super();
+	this.designation = designation;
+	this.prix = prix;
+	this.photo = photo;
+	this.quantite = quantite;
+	this.categorie = categorie;
 }
+
   
   
 }
