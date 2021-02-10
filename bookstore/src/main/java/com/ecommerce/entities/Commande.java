@@ -25,6 +25,7 @@ public class Commande implements Serializable {
   @ManyToOne
   @JoinColumn(name="idClient")
   private Client client;
+  private boolean paye;
 public Long getIdCommande() {
 	return idCommande;
 }

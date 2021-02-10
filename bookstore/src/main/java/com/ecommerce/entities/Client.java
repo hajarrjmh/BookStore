@@ -7,7 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 @Entity
 public class Client implements Serializable {
 	@Id
@@ -17,6 +19,11 @@ public class Client implements Serializable {
 	private String adresse;
 	private String email;
 	private String tel;
+	
+	@OneToOne
+	@JoinColumn(name="ID_PAIEMENT")
+	private Paiement paiement;
+	
 	@OneToMany(mappedBy="client")
 	private Collection<Commande> commandes;
 	public Long getIdClient() {
@@ -59,13 +66,15 @@ public class Client implements Serializable {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Client(String nomClient, String adresse, String email, String tel) {
+	public Client(String nomClient, String adresse, String email, String tel, Paiement paiement) {
 		super();
 		this.nomClient = nomClient;
 		this.adresse = adresse;
 		this.email = email;
 		this.tel = tel;
+		this.paiement = paiement;
 	}
+	
 	
 
 }

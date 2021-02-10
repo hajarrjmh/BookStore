@@ -45,7 +45,7 @@ public class BookstoreApplication implements CommandLineRunner{
 		categorieRepository.save(new Categorie());
 		categorieRepository.save(new Categorie());
 		categorieRepository.save(new Categorie());*/
-		
+	
 		/*Produit p1=new Produit("designation1",  14,"photo1", 13);
 		//p1.setCategorie(null);
 		produitRepository.save(p1);

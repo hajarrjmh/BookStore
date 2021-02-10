@@ -23,7 +23,7 @@ public class ProduitController {
 	private AdminRepository adminRepository;
 	
 	@RequestMapping(value="/seConnecter", method=RequestMethod.POST)
-	public String seConnecterPost(Model model, 
+	public String seConnecterPost(Model model,
 			@RequestParam(name="userName",  defaultValue="") String userName, 
 			@RequestParam(name="password",  defaultValue="") String password) {
 		Admin admin=adminRepository.findByUserName(userName);

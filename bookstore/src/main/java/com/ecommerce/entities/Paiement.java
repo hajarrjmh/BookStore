@@ -16,12 +16,12 @@ public class Paiement implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	
 	private Long idPaiement ;
 	private String nomTitulaire;
 	private String numCarte;
 	private int codeCVV ;
 	private Date dateExpiration;
+	
 	public Long getIdPaiement() {
 		return idPaiement;
 	}
