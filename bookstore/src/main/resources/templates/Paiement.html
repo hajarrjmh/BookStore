@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Paiement</title>
+	<link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}"></link>			
+	<style>
+				*{
+					margin:0;
+					padding:0;
+						
+				}
+	            .panel{
+	                width:40%;
+	                text-align:center;
+	                position:relative;
+	                left:30%;
+	                right:30%;
+	                top:150px;
+	            }
+	            table{
+	            	width:100%;
+	            	height:100%;
+	            }
+	            .nomTitulaire, .codeCVV,.numCarte,.dateExpiration{
+	            	width:100%;
+	            }
+	</style>
+</head>
+<body>
+	<div  class="panel panel-primary">
+		<div class="panel-heading">Enregistrer Paiement</div>
+		<div class="panel-body">
+			<form th:action="@{/enregistrerPaiement}" method="post">
+				<table >
+					<tr>
+						<td >
+							<label>Nom Titulaire</label>
+						</td>
+						<td align="left">
+							<input class="nomTitulaire" type="text" name="nomTitulaire">
+						</td>
+					</tr>
+					<tr>
+						<td >
+							<label>Numero de carte</label>
+						</td>
+						<td align="left">
+							<input class="numCarte" type="numCarte" name="numCarte">
+						</td>
+					</tr>
+					<tr>
+						<td >
+							<label>Code CVV</label>
+						</td>
+						<td align="left">
+							<input class="codeCVV" type="text" name="codeCVV">
+						</td>
+					</tr>
+					<tr>
+						<td >
+							<label>Date Expiration</label>
+						</td>
+						<td align="left">
+							<input class="dateExpiration" type="date" name="dateExpiration" value="2030-07-22" min="2021-02-11" max="2040-12-31">
+						</td>
+					</tr>
+					<tr>
+						<td  colspan="2">
+							<br>
+							<input   value="enregistrer" class="btn btn-primary" type="submit">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

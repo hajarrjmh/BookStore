@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../static/css/bootstrap.min.css" 
+				th:href="@{css/bootstrap.min.css}"></link>
+<title>Connexion Client</title>
+<style>
+			
+			*{
+				margin:0;
+				padding:0;
+					
+			}
+            .panel{
+                width:40%;
+                text-align:center;
+                position:relative;
+                left:30%;
+                right:30%;
+                top:150px;
+            }
+            table{
+            	width:100%;
+            	height:100%;
+            }
+            .email, .password{
+            	width:100%;
+            }
+            span{
+            	color: red;
+            }
+        </style>
+</head>
+<body>
+	<div  class="panel panel-primary">
+		<div class="panel-heading">Se Connecter</div>
+		<div class="panel-body">
+			<form th:action="@{/seConnecterClient}" method="post">
+			<table >
+				<tr>
+					<td >
+						<label>Email</label>
+						
+					</td>
+					<td align="left">
+						<input class="email" type="text" name="email">
+					</td>
+				</tr>
+				<tr>
+					<td >
+						<label>Password</label>
+					</td>
+					<td align="left">
+						<input class="password" type="password" name="password">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<span th:text="${verifier}"></span>
+					</td>
+				</tr>
+				<tr>
+					<td  colspan="2">
+						<input   value="se connecter" class="btn btn-primary" type="submit">
+					</td>
+				</tr>
+			</table>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

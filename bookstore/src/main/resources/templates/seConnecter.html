@@ -15,16 +15,14 @@
                 top:150px;
             }
         </style>
-
 </head>
-
 <body>
 	<div  class="panel panel-primary">
 		<div class="panel-heading">Se Connecter</div>
 		<div class="panel-body">
 			<form th:action="@{/seConnecter}" method="post">
 				<label>User Name</label>
-				<input type="text" name="userName">
+				<input type="email" name="userName">
 				<br>
 				<label>Password</label>
 				<input type="password" name="password">

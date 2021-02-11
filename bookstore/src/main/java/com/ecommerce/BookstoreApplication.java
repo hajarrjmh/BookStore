@@ -13,7 +13,7 @@ import com.ecommerce.dao.*;
 import com.ecommerce.entities.*;
 @SpringBootApplication
 public class BookstoreApplication implements CommandLineRunner{
-	
+	/*
 	@Autowired
 	private ProduitRepository produitRepository;
 	
@@ -33,7 +33,7 @@ public class BookstoreApplication implements CommandLineRunner{
 	private PaiementRepository paiementRepository;
 	
 	@Autowired
-	private AdminRepository adminRepository;
+	private AdminRepository adminRepository;*/
 	
 	public static void main(String[] args) {
 		SpringApplication.run(BookstoreApplication.class, args);
@@ -41,12 +41,12 @@ public class BookstoreApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		/*categorieRepository.save(new Categorie());
-		categorieRepository.save(new Categorie());
-		categorieRepository.save(new Categorie());
-		categorieRepository.save(new Categorie());*/
+		/*categorieRepository.save(new Categorie("nomCategorie1"));
+		categorieRepository.save(new Categorie("nomCategorie2"));
+		categorieRepository.save(new Categorie("nomCategorie3"));
+		categorieRepository.save(new Categorie("nomCategorie4"));
 	
-		/*Produit p1=new Produit("designation1",  14,"photo1", 13);
+		Produit p1=new Produit("designation1",  14,"photo1", 13);
 		//p1.setCategorie(null);
 		produitRepository.save(p1);
 		produitRepository.save(new Produit("designation2",  14,"photo2", 13));
@@ -54,13 +54,16 @@ public class BookstoreApplication implements CommandLineRunner{
 		produitRepository.save(new Produit("designation4",  14,"photo4", 13));
 		//produitRepository.findAll().forEach(p->{System.out.println(p.getDesignation());});
 		
-		clientRepository.save(new Client("nomClient1","adresse1", "email1","tel1"));
-		clientRepository.save(new Client("nomClient2","adresse2", "email2","tel2"));
-		clientRepository.save(new Client("nomClient3","adresse3", "email3","tel3"));
-		clientRepository.save(new Client("nomClient4","adresse4", "email4","tel4"));
-		clientRepository.save(new Client("nomClient5","adresse5", "email5","tel5"));
+		clientRepository.save(new Client("nomClient1","adresse1", "email1","password1","tel1",paiementRepository.getOne(new Long(1))));
+		clientRepository.save(new Client("nomClient2","adresse2", "email2","password2","tel2",paiementRepository.getOne(new Long(2))));
+		clientRepository.save(new Client("nomClient3","adresse3", "email3","password3","tel3",paiementRepository.getOne(new Long(3))));
+		clientRepository.save(new Client("nomClient4","adresse4", "email4","password4","tel4",paiementRepository.getOne(new Long(4))));
+		clientRepository.save(new Client("nomClient5","adresse5", "email5","password5","tel5",paiementRepository.getOne(new Long(5))));*/
+		
+		
 		//clientRepository.findAll().forEach(p->{System.out.println(p.getNom());});
 		
+		/*
 		commandeRepository.save(new Commande(new Date(),clientRepository.getOne(new Long(2))));
 		commandeRepository.save(new Commande(new Date(),clientRepository.getOne(new Long(3))));
 		

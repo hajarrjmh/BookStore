@@ -18,6 +18,19 @@ public class Client implements Serializable {
 	private String nomClient;
 	private String adresse;
 	private String email;
+	private String password;
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public Paiement getPaiement() {
+		return paiement;
+	}
+	public void setPaiement(Paiement paiement) {
+		this.paiement = paiement;
+	}
 	private String tel;
 	
 	@OneToOne
@@ -66,14 +79,16 @@ public class Client implements Serializable {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Client(String nomClient, String adresse, String email, String tel, Paiement paiement) {
+	public Client(String nomClient, String adresse, String email, String password, String tel, Paiement paiement) {
 		super();
 		this.nomClient = nomClient;
 		this.adresse = adresse;
 		this.email = email;
+		this.password = password;
 		this.tel = tel;
 		this.paiement = paiement;
 	}
+	
 	
 	
 

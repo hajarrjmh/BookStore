@@ -20,16 +20,13 @@ public class Categorie implements Serializable {
 	private Long idCategorie;
 	private String nomCategorie;
 	
-	private byte[] photo ; 
-	private String nomPhoto ;
 	@OneToMany(mappedBy="categorie")
 	private Collection <Produit>produits;
 	
-	public Categorie(String nomCategorie, byte[] photo, String nomPhoto) {
+	public Categorie(String nomCategorie) {
 		super();
 		this.nomCategorie = nomCategorie;
-		this.photo = photo;
-		this.nomPhoto = nomPhoto;
+		
 	}
 
 	public Long getIdCategorie() {
@@ -46,22 +43,6 @@ public class Categorie implements Serializable {
 
 	public void setNomCategorie(String nomCategorie) {
 		this.nomCategorie = nomCategorie;
-	}
-
-	public byte[] getPhoto() {
-		return photo;
-	}
-
-	public void setPhoto(byte[] photo) {
-		this.photo = photo;
-	}
-
-	public String getNomPhoto() {
-		return nomPhoto;
-	}
-
-	public void setNomPhoto(String nomPhoto) {
-		this.nomPhoto = nomPhoto;
 	}
 
 	public Collection<Produit> getProduits() {
