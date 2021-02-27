@@ -23,8 +23,16 @@ public class Admin implements Serializable {
 	@Column(name="admin_name")
   private String userName;
   private String password;
+  private String test;
   
-  public Long getIdUser() {
+  
+  public String getTest() {
+	return test;
+}
+public void setTest(String test) {
+	this.test = test;
+}
+public Long getIdUser() {
 		return idUser;
 	}
 	public void setIdUser(Long idUser) {
